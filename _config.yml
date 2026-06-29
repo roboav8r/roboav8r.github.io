@@ -1,0 +1,31 @@
+# --- Site identity -------------------------------------------------------
+title: John Duncan
+tagline: Perception & world modeling for physical AI
+description: >-
+  Roboticist working on perception, estimation, and world models for robots
+  that move through the real world. Building PRISM and Arwun.
+author: John Duncan
+
+# --- URLs ----------------------------------------------------------------
+# For a user site (repo named roboav8r.github.io) the site is served at the
+# root, so url has no path and baseurl is empty.
+url: "https://roboav8r.github.io"
+baseurl: ""
+
+# --- Links shown in the header / footer ----------------------------------
+github_user: roboav8r
+linkedin_user: john-a-duncan
+
+# --- Build ---------------------------------------------------------------
+# Posts become build-log entries at /log/<title>/
+permalink: /log/:title/
+timezone: America/New_York
+
+# We ship our own layouts in _layouts/, so no theme gem is needed.
+# GitHub Pages will build this with its bundled Jekyll automatically.
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

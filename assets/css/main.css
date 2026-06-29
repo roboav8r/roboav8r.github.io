@@ -1,0 +1,208 @@
+/* =========================================================================
+   roboav8r.github.io — "engineering notebook" identity
+   Tokens first, then base, then components. Edit tokens to retune the whole site.
+   ========================================================================= */
+
+:root {
+  /* Palette — cool paper + terminal-ink panels + one burnt-orange signal */
+  --bg:        #f7f9fb;
+  --bg-tint:   #eef2f5;
+  --panel:     #0e1419;   /* terminal-dark blocks (code, footer)        */
+  --ink:       #14181d;   /* primary text                               */
+  --muted:     #59636e;   /* secondary text, labels                     */
+  --hair:      #e1e7ec;   /* hairlines, borders                         */
+  --accent:    #b85400;   /* UT burnt orange — links, signal            */
+  --accent-br: #f2843c;   /* lighter burnt orange for dark panels       */
+
+  /* Type */
+  --sans: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Scale */
+  --measure: 68ch;
+  --gap: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* --- Reset-ish ----------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 { line-height: 1.12; font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.9rem, 1.3rem + 2.6vw, 3rem); }
+h2 { font-size: clamp(1.4rem, 1.1rem + 1.4vw, 1.95rem); }
+h3 { font-size: 1.15rem; }
+p  { max-width: var(--measure); }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+hr { border: 0; border-top: 1px solid var(--hair); margin: var(--gap) 0; }
+
+/* --- Layout -------------------------------------------------------------- */
+.wrap { width: min(72rem, 100% - 2.5rem); margin-inline: auto; }
+.section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+main { min-height: 60vh; }
+
+/* --- Utility ------------------------------------------------------------- */
+.mono { font-family: var(--mono); }
+.muted { color: var(--muted); }
+.eyebrow {
+  font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 0.9rem;
+}
+.lede { font-size: 1.15rem; color: var(--ink); max-width: 60ch; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0; background: var(--ink); color: #fff;
+  padding: 0.6rem 1rem; z-index: 10;
+}
+.skip-link:focus { left: 0.75rem; top: 0.75rem; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+/* --- Header -------------------------------------------------------------- */
+.site-header {
+  border-bottom: 1px solid var(--hair);
+  position: sticky; top: 0; z-index: 5;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.1) blur(6px);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.85rem; }
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink); font-weight: 600; }
+.brand:hover { text-decoration: none; }
+.brand-mark { color: var(--accent); display: inline-flex; }
+.brand-name { letter-spacing: -0.01em; }
+.site-nav { display: flex; gap: clamp(0.8rem, 2.5vw, 1.6rem); flex-wrap: wrap; }
+.site-nav a { color: var(--muted); font-size: 0.95rem; }
+.site-nav a:hover { color: var(--ink); text-decoration: none; }
+
+/* --- Hero ---------------------------------------------------------------- */
+.hero { padding-block: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 4vw, 3rem); }
+.hero-title { margin: 0 0 1.4rem; max-width: 22ch; }
+.hero-lede { font-size: 1.18rem; max-width: 58ch; color: #2b333c; }
+.hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.8rem; }
+
+.btn {
+  display: inline-block; font-family: var(--mono); font-size: 0.9rem;
+  padding: 0.6rem 1.1rem; border: 1px solid var(--ink); color: #fff; background: var(--ink);
+  border-radius: 2px;
+}
+.btn:hover { background: #000; text-decoration: none; }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--hair); }
+.btn-ghost:hover { background: var(--bg-tint); border-color: var(--muted); }
+
+/* --- Factor-graph divider (the signature) -------------------------------- */
+/* A hairline carrying nodes — a nod to PRISM's factor graph. Nodes are drawn
+   as radial gradients on the bar itself, so they stay put at any width. */
+.fg-divider {
+  height: 9px; border: 0; margin: 0; background:
+    /* the hairline */
+    linear-gradient(var(--hair), var(--hair)) 0 50% / 100% 1px no-repeat,
+    /* three nodes: hollow burnt-orange dots */
+    radial-gradient(circle 3.5px, var(--accent) 0 1.4px, var(--bg) 1.5px 3px, transparent 3.1px) 18% 50% / 12px 9px no-repeat,
+    radial-gradient(circle 3.5px, var(--accent) 0 1.4px, var(--bg) 1.5px 3px, transparent 3.1px) 50% 50% / 12px 9px no-repeat,
+    radial-gradient(circle 3.5px, var(--accent) 0 1.4px, var(--bg) 1.5px 3px, transparent 3.1px) 82% 50% / 12px 9px no-repeat;
+}
+
+/* --- "Currently" grid ---------------------------------------------------- */
+.now-grid { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.now-item h3 { margin: 0 0 0.4rem; }
+.now-item p { color: var(--muted); margin: 0; }
+.now-item { border-top: 2px solid var(--ink); padding-top: 0.9rem; }
+
+/* --- Log list ------------------------------------------------------------ */
+.log-list { list-style: none; margin: 0; padding: 0; }
+.log-row { border-top: 1px solid var(--hair); }
+.log-row:last-child { border-bottom: 1px solid var(--hair); }
+.log-row a {
+  display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; align-items: baseline;
+  padding: 1rem 0; color: var(--ink);
+}
+.log-row a:hover { text-decoration: none; background: var(--bg-tint); }
+.log-list--full .log-row a { grid-template-columns: 7.5rem 1fr; }
+.log-date { color: var(--accent); font-size: 0.9rem; }
+.log-title { font-weight: 600; }
+.log-summary { grid-column: 2; color: var(--muted); font-size: 0.95rem; display: block; margin-top: 0.2rem; }
+
+/* --- Page heads ---------------------------------------------------------- */
+.page-head h1 { margin: 0 0 0.6rem; }
+.page-head .lede { color: var(--muted); }
+
+/* --- Projects ------------------------------------------------------------ */
+.project { border-top: 1px solid var(--hair); padding-block: clamp(2rem, 5vw, 3.2rem); }
+.project-grid { display: grid; grid-template-columns: 14rem 1fr; gap: var(--gap); }
+.project-meta { display: flex; flex-direction: column; gap: 0.35rem; color: var(--muted); font-size: 0.85rem; }
+.project-meta .tag {
+  align-self: start; color: var(--accent); border: 1px solid var(--accent);
+  padding: 0.1rem 0.5rem; border-radius: 2px; font-size: 0.72rem; letter-spacing: 0.1em;
+  text-transform: uppercase; margin-bottom: 0.3rem;
+}
+.project-meta .status { color: var(--ink); }
+.project-body h2 { margin: 0 0 0.6rem; }
+.project-links { margin-top: 0.8rem; display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: 0.9rem; }
+
+/* --- Resume -------------------------------------------------------------- */
+.resume-block { border-top: 1px solid var(--hair); padding-block: 1.8rem; }
+.resume-row { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; flex-wrap: wrap; }
+.resume-role h3 { margin: 0; }
+.resume-role .org { margin: 0.15rem 0 0; color: var(--muted); }
+.resume-when { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+.resume-block > p { color: var(--muted); margin-top: 0.7rem; }
+.skill-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: var(--gap); font-size: 0.9rem; }
+.skill-cols h4 { margin: 0 0 0.5rem; color: var(--ink); font-family: var(--sans); }
+.skill-cols ul { list-style: none; margin: 0; padding: 0; color: var(--muted); }
+.skill-cols li { padding: 0.15rem 0; }
+
+/* --- Post / prose -------------------------------------------------------- */
+.post { padding-block: clamp(2.5rem, 6vw, 4rem); }
+.post-head { border-bottom: 1px solid var(--hair); padding-bottom: 1.4rem; margin-bottom: 1.8rem; }
+.post-head h1 { margin: 0.3rem 0 0.6rem; }
+.tags span { color: var(--muted); margin-right: 0.8rem; font-size: 0.85rem; }
+.tags span::before { content: "#"; color: var(--accent); }
+.prose { max-width: var(--measure); }
+.prose h2 { margin: 2rem 0 0.6rem; }
+.prose h3 { margin: 1.6rem 0 0.4rem; }
+.prose ul, .prose ol { padding-left: 1.2rem; }
+.prose li { margin: 0.3rem 0; }
+.prose code {
+  font-family: var(--mono); font-size: 0.88em; background: var(--bg-tint);
+  padding: 0.1rem 0.35rem; border-radius: 3px;
+}
+.prose pre {
+  background: var(--panel); color: #e8edf2; padding: 1rem 1.1rem; border-radius: 4px;
+  overflow-x: auto; font-family: var(--mono); font-size: 0.85rem; line-height: 1.55;
+}
+.prose pre code { background: none; padding: 0; color: inherit; }
+.prose blockquote {
+  margin: 1.2rem 0; padding-left: 1rem; border-left: 2px solid var(--accent); color: var(--muted);
+}
+.post-nav { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--hair); }
+.empty { color: var(--muted); }
+
+/* --- Footer -------------------------------------------------------------- */
+.site-footer { background: var(--panel); color: #aeb8c2; margin-top: 3rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.5rem; flex-wrap: wrap; font-size: 0.85rem; }
+.site-footer a { color: var(--accent-br); }
+
+/* --- Responsive ---------------------------------------------------------- */
+@media (max-width: 640px) {
+  .project-grid { grid-template-columns: 1fr; }
+  .project-meta { flex-flow: row wrap; gap: 0.5rem 1rem; }
+  .log-row a { grid-template-columns: 6rem 1fr; }
+  .hero-title { max-width: none; }
+}
+
+/* --- Motion ------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

@@ -1,0 +1,31 @@
+---
+layout: default
+title: Build log
+description: Notes from building Arwun and PRISM — decisions, dead-ends, and fixes.
+permalink: /log/
+---
+
+<section class="wrap section page-head">
+  <p class="eyebrow mono">Notebook</p>
+  <h1>Build log</h1>
+  <p class="lede">Working notes from building Arwun and PRISM — the decisions, the
+     dead-ends, and the fixes. Written mostly for future me; useful, maybe, for you.</p>
+</section>
+
+<section class="wrap section">
+  {% if site.posts.size > 0 %}
+  <ul class="log-list log-list--full">
+    {% for post in site.posts %}
+    <li class="log-row">
+      <a href="{{ post.url | relative_url }}">
+        <span class="log-date mono">{{ post.date | date: "%Y.%m.%d" }}</span>
+        <span class="log-title">{{ post.title }}</span>
+        {% if post.summary %}<span class="log-summary">{{ post.summary }}</span>{% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="empty mono">No entries yet. The first one is in <code>_posts/</code>.</p>
+  {% endif %}
+</section>
