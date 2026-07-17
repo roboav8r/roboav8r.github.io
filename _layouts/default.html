@@ -16,23 +16,65 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="{{ '/' | relative_url }}">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 24" width="40" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <line x1="6" y1="18" x2="20" y2="6"></line>
-            <line x1="20" y1="6" x2="34" y2="18"></line>
-            <line x1="6" y1="18" x2="34" y2="18"></line>
-            <circle cx="6" cy="18" r="3" fill="var(--bg)"></circle>
-            <circle cx="20" cy="6" r="3" fill="var(--bg)"></circle>
-            <circle cx="34" cy="18" r="3" fill="var(--bg)"></circle>
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="John Duncan — home">
+        <span class="brand-mark">
+          <svg viewBox="0 0 144 80" width="204" height="113" fill="none"
+               stroke="currentColor" stroke-width="1.6" role="img" aria-hidden="true"
+               font-family="IBM Plex Mono, monospace">
+            <!-- edges: name as a factor graph (a nod to PRISM) -->
+            <g class="brand-edges">
+              <line x1="12" y1="12" x2="36"  y2="12"></line>
+              <line x1="36" y1="12" x2="60"  y2="12"></line>
+              <line x1="60" y1="12" x2="84"  y2="12"></line>
+              <line x1="12" y1="40" x2="36"  y2="40"></line>
+              <line x1="36" y1="40" x2="60"  y2="40"></line>
+              <line x1="60" y1="40" x2="84"  y2="40"></line>
+              <line x1="84" y1="40" x2="108" y2="40"></line>
+              <line x1="108" y1="40" x2="132" y2="40"></line>
+              <line x1="12" y1="68" x2="36"  y2="68"></line>
+              <line x1="36" y1="68" x2="60"  y2="68"></line>
+            </g>
+            <!-- nodes -->
+            <g class="brand-nodes">
+              <circle cx="12"  cy="12" r="8" fill="var(--bg)"></circle>
+              <circle cx="36"  cy="12" r="8" fill="var(--bg)"></circle>
+              <circle cx="60"  cy="12" r="8" fill="var(--bg)"></circle>
+              <circle cx="84"  cy="12" r="8" fill="var(--bg)"></circle>
+              <circle cx="12"  cy="40" r="8" fill="var(--bg)"></circle>
+              <circle cx="36"  cy="40" r="8" fill="var(--bg)"></circle>
+              <circle cx="60"  cy="40" r="8" fill="var(--bg)"></circle>
+              <circle cx="84"  cy="40" r="8" fill="var(--bg)"></circle>
+              <circle cx="108" cy="40" r="8" fill="var(--bg)"></circle>
+              <circle cx="132" cy="40" r="8" fill="var(--bg)"></circle>
+              <circle cx="12"  cy="68" r="8" fill="var(--bg)"></circle>
+              <circle cx="36"  cy="68" r="8" fill="var(--bg)"></circle>
+              <circle cx="60"  cy="68" r="8" fill="var(--bg)"></circle>
+            </g>
+            <!-- letters -->
+            <g fill="currentColor" stroke="none" font-size="9" font-weight="600"
+               text-anchor="middle" dominant-baseline="central">
+              <text x="12"  y="12">J</text>
+              <text x="36"  y="12">O</text>
+              <text x="60"  y="12">H</text>
+              <text x="84"  y="12">N</text>
+              <text x="12"  y="40">D</text>
+              <text x="36"  y="40">U</text>
+              <text x="60"  y="40">N</text>
+              <text x="84"  y="40">C</text>
+              <text x="108" y="40">A</text>
+              <text x="132" y="40">N</text>
+              <text x="12"  y="68">P</text>
+              <text x="36"  y="68">H</text>
+              <text x="60"  y="68">D</text>
+            </g>
           </svg>
         </span>
-        <span class="brand-name">John Duncan</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="{{ '/projects/' | relative_url }}">Projects</a>
-        <a href="{{ '/log/' | relative_url }}">Build log</a>
+        <a href="{{ '/log/' | relative_url }}">Blog</a>
         <a href="{{ '/resume/' | relative_url }}">Resume</a>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_user }}/">LinkedIn</a>
         <a href="https://github.com/{{ site.github_user }}">GitHub</a>
       </nav>
     </div>
