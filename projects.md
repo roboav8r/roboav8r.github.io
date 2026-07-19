@@ -11,6 +11,8 @@ description: Robotics and perception projects — Arwun, PRISM, FiftyOne plugins
      <a href="https://github.com/{{ site.github_user }}">GitHub</a>.</p>
 </section>
 
+<!-- ARCHIVED 2026-07-18 — Arwun and PRISM entries, kept for later. Uncomment to restore.
+
 <section class="wrap section project" id="arwun">
   <div class="project-grid">
     <div class="project-meta mono">
@@ -25,9 +27,7 @@ description: Robotics and perception projects — Arwun, PRISM, FiftyOne plugins
          control stack runs from an ESP32-S3 up to a Jetson Orin Nano, with controls
          prototyped in Drake (LQR) and a perception/world-modeling front-end moving onto
          NVIDIA Isaac. The whole build is documented in the
-         <a href="{{ '/log/' | relative_url }}">build log</a>.</p>
-      <!-- TODO: add a photo or short clip once the bench build is presentable -->
-      <!-- TODO: link the public repo when you open it -->
+         build log.</p>
     </div>
   </div>
 </section>
@@ -46,10 +46,11 @@ description: Robotics and perception projects — Arwun, PRISM, FiftyOne plugins
          hierarchical scene graph, and an LLM-grounded policy layer. Accelerated perception
          sources — visual SLAM, 3D reconstruction, detection — feed it as measurements.
          Supersedes my earlier MaRMOT and C2HI work.</p>
-      <!-- TODO: link repo / paper when ready -->
     </div>
   </div>
 </section>
+
+-->
 
 <section class="wrap section project" id="fiftyone">
   <div class="project-grid">

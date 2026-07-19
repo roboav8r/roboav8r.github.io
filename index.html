@@ -5,25 +5,29 @@ layout: default
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow mono">Perception · World modeling · Physical AI</p>
+      <p class="eyebrow mono">Aerospace · Defense · Robotics · Perception · State Estimation · Machine Learning · Physical AI</p>
       <h1 class="hero-title">I build the estimation and world-modeling systems<br>that let robots make sense of where they are.</h1>
       <p class="hero-lede">
         Roboticist with a PhD in perception. Day to day I'm a machine-learning engineer
         at <a href="https://voxel51.com">Voxel51</a>, helping teams wrangle and evaluate
-        computer-vision data with FiftyOne. Off the clock I'm building
+        computer-vision data with FiftyOne.
+      </p>
+      <!-- ARCHIVED 2026-07-18 — Arwun/PRISM lede, restore once the projects are back:
+        Off the clock I'm building
         <a href="{{ '/projects/#prism' | relative_url }}">PRISM</a>, a factor-graph world model,
         and <a href="{{ '/projects/#arwun' | relative_url }}">Arwun</a>, a self-balancing
         tracked robot it runs on.
-      </p>
+      -->
+
       <div class="hero-actions">
-        <a class="btn" href="{{ '/projects/' | relative_url }}">See the work</a>
-        <a class="btn btn-ghost" href="{{ '/log/' | relative_url }}">Read the build log</a>
+        <a class="btn" href="{{ '/projects/' | relative_url }}">Projects</a>
+        <a class="btn btn-ghost" href="{{ '/log/' | relative_url }}">Blog</a>
       </div>
     </div>
     <div class="hero-media">
-      <div class="img-placeholder" role="img" aria-label="Image placeholder">
-        <span class="mono">image</span>
-      </div>
+      <img class="hero-photo" src="{{ '/assets/img/jd.png' | relative_url }}"
+           width="835" height="894" loading="eager" decoding="async"
+           alt="John Duncan">
     </div>
   </div>
 </section>
@@ -35,6 +39,7 @@ layout: default
 <section class="wrap section">
   <p class="eyebrow mono">Currently</p>
   <div class="now-grid">
+    <!-- ARCHIVED 2026-07-18 — Arwun/PRISM cards, restore once the projects are back:
     <div class="now-item">
       <h3>Arwun → Isaac</h3>
       <p>Bringing a self-balancing tracked robot from Drake/LQR control onto the NVIDIA
@@ -46,6 +51,7 @@ layout: default
       <p>A GTSAM factor-graph estimation backend, a hierarchical scene graph, and an
          LLM-grounded policy layer — fed by accelerated perception front-ends.</p>
     </div>
+    -->
     <div class="now-item">
       <h3>FiftyOne plugins</h3>
       <p>Open-source tooling for object tracking and dataset evaluation, built on the
@@ -56,7 +62,7 @@ layout: default
 
 {% if site.posts.size > 0 %}
 <section class="wrap section">
-  <p class="eyebrow mono">Latest from the log</p>
+  <p class="eyebrow mono">Latest from the blog</p>
   <ul class="log-list">
     {% for post in site.posts limit:3 %}
     <li class="log-row">
