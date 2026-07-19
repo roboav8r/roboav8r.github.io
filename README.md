@@ -41,6 +41,17 @@ It appears automatically on `/log/` and the homepage, newest first.
 
 ## Preview locally (optional)
 
+### Prerequisites
+
+- Ruby 3.x (with a C toolchain to build native gems — on Debian/Ubuntu:
+  `sudo apt install ruby-full build-essential zlib1g-dev`)
+- Bundler: `gem install bundler`
+
+Gem dependencies (Jekyll, GitHub Pages, etc.) are pinned in the `Gemfile` —
+no separate requirements file needed.
+
+### Run
+
 ```bash
 bundle install
 bundle exec jekyll serve --livereload
