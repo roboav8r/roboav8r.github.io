@@ -8,3 +8,6 @@ Gemfile.lock
 .DS_Store
 vendor/bundle/
 .bundle/
+
+# Local resume source files (staging area for building the master resume — not published)
+resumes/
