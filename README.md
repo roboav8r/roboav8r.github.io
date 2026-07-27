@@ -1,6 +1,6 @@
 # roboav8r.github.io
 
-Personal site and Arwun build log. Built with plain Jekyll (no theme gem) so GitHub
+Personal site and R-1 build log. Built with plain Jekyll (no theme gem) so GitHub
 Pages compiles it automatically — there's nothing to build yourself.
 
 ## Deploy (one time)
@@ -23,7 +23,7 @@ layout: post
 title: "Your title"
 date: 2026-06-20
 summary: "One line shown in the log list."
-tags: [arwun, isaac]
+tags: [r1, hardware]
 ---
 
 Write the entry in Markdown here.
