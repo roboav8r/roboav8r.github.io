@@ -21,10 +21,10 @@ description: Robotics and perception projects — R-1, PRISM, FiftyOne plugins, 
     </div>
     <div class="project-body">
       <h2>R-1</h2>
-      <p>A small backpack-portable tracked robot, designed from scratch. Differential drive
+      <p>A small, portable, and highly mobile tracked robot, designed from scratch. Diff drive
          on two long side treads, plus two flipper arms that extend the chassis to climb and
-         descend stairs — and let the robot stand upright and balance. A camera and an IMU
-         make up the sensor suite, driving a ROS 2 navigation and perception stack on a
+         descend stairs, and let the robot stand upright and balance. A camera and an IMU
+         make up the sensor suite, driving a ROS2 navigation and perception stack on a
          Jetson Orin Nano, with offline data recording for development. Actuation is
          gearmotors with integrated encoders and standard hobby servos; the dynamics and
          control work is prototyped in Drake. The whole build is documented in the
@@ -64,9 +64,9 @@ description: Robotics and perception projects — R-1, PRISM, FiftyOne plugins, 
     </div>
     <div class="project-body">
       <h2>FiftyOne plugins</h2>
-      <p>Tooling for the computer-vision data platform I work on: an object-tracking
+      <p>Tooling for the physical AI data platform I work on: an object-tracking
          plugin with quality-control facets and a roadmap of tracking-specific operators,
-         plus integrations for cloud-hosted datasets.</p>
+         plus integrations for cloud-hosted datasets and audio.</p>
       <p class="project-links mono">
         <a href="https://github.com/{{ site.github_user }}/fiftyone-object-tracking">fiftyone-object-tracking</a>
         <a href="https://github.com/{{ site.github_user }}/fiftyone-aws">fiftyone-aws</a>
@@ -83,7 +83,7 @@ description: Robotics and perception projects — R-1, PRISM, FiftyOne plugins, 
     </div>
     <div class="project-body">
       <h2>Research</h2>
-      <p>PhD in robotics, focused on perception. Published work in multi-object tracking
+      <p>PhD in robotics, focused on multimodal perception. Published work in multi-object tracking
          and human–robot interaction.</p>
       <!-- TODO: drop in your real publications (title, venue, year, link) once you send the list.
            Example format:
