@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Projects
-description: Robotics and perception projects — Arwun, PRISM, FiftyOne plugins, research.
+description: Robotics and perception projects — R-1, PRISM, FiftyOne plugins, research.
 ---
 
 <section class="wrap section page-head">
@@ -11,22 +11,25 @@ description: Robotics and perception projects — Arwun, PRISM, FiftyOne plugins
      <a href="https://github.com/{{ site.github_user }}">GitHub</a>.</p>
 </section>
 
-<!-- ARCHIVED 2026-07-18 — Arwun and PRISM entries, kept for later. Uncomment to restore.
+<!-- ARCHIVED 2026-07-18 — R-1 and PRISM entries, kept for later. Uncomment to restore.
 
-<section class="wrap section project" id="arwun">
+<section class="wrap section project" id="r1">
   <div class="project-grid">
     <div class="project-meta mono">
       <span class="tag">Robot</span>
       <span>Jetson Orin Nano</span>
-      <span>ROS 2 · Drake · Isaac</span>
+      <span>ROS 2 · Drake</span>
       <span class="status">In development</span>
     </div>
     <div class="project-body">
-      <h2>Arwun</h2>
-      <p>A small self-balancing, tracked mobile robot with flipper-gripper arms. A layered
-         control stack runs from an ESP32-S3 up to a Jetson Orin Nano, with controls
-         prototyped in Drake (LQR) and a perception/world-modeling front-end moving onto
-         NVIDIA Isaac. The whole build is documented in the
+      <h2>R-1</h2>
+      <p>A small backpack-portable tracked robot, designed from scratch. Differential drive
+         on two long side treads, plus two flipper arms that extend the chassis to climb and
+         descend stairs — and let the robot stand upright and balance. A camera and an IMU
+         make up the sensor suite, driving a ROS 2 navigation and perception stack on a
+         Jetson Orin Nano, with offline data recording for development. Actuation is
+         gearmotors with integrated encoders and standard hobby servos; the dynamics and
+         control work is prototyped in Drake. The whole build is documented in the
          build log.</p>
     </div>
   </div>
