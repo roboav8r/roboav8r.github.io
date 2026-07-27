@@ -284,6 +284,15 @@ main { min-height: 60vh; }
 .prose blockquote {
   margin: 1.2rem 0; padding-left: 1rem; border-left: 2px solid var(--accent); color: var(--muted);
 }
+.prose figure { margin: 1.8rem 0; }
+.prose img {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--hair); border-radius: 4px;
+  background: var(--bg-tint);
+}
+.prose figcaption {
+  margin-top: 0.6rem; color: var(--muted); font-size: 0.85rem; line-height: 1.5;
+}
 .post-nav { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--hair); }
 .empty { color: var(--muted); }
 
