@@ -11,8 +11,6 @@ description: Robotics and perception projects — R-1, PRISM, FiftyOne plugins, 
      <a href="https://github.com/{{ site.github_user }}">GitHub</a>.</p>
 </section>
 
-<!-- ARCHIVED 2026-07-18 — R-1 and PRISM entries, kept for later. Uncomment to restore.
-
 <section class="wrap section project" id="r1">
   <div class="project-grid">
     <div class="project-meta mono">
@@ -30,10 +28,12 @@ description: Robotics and perception projects — R-1, PRISM, FiftyOne plugins, 
          Jetson Orin Nano, with offline data recording for development. Actuation is
          gearmotors with integrated encoders and standard hobby servos; the dynamics and
          control work is prototyped in Drake. The whole build is documented in the
-         build log.</p>
+         <a href="{{ '/log/' | relative_url }}">build log</a>.</p>
     </div>
   </div>
 </section>
+
+<!-- ARCHIVED 2026-07-18 — PRISM entry, kept for later. Uncomment to restore.
 
 <section class="wrap section project" id="prism">
   <div class="project-grid">
