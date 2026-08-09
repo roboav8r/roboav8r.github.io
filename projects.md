@@ -66,10 +66,38 @@ description: Robotics and perception projects — Arwun, PRISM, FiftyOne plugins
       <h2>FiftyOne plugins</h2>
       <p>Tooling for the physical AI data platform I work on: an object-tracking
          plugin with quality-control facets and a roadmap of tracking-specific operators,
-         plus integrations for cloud-hosted datasets and audio.</p>
+         plus integrations for cloud-hosted datasets.</p>
       <p class="project-links mono">
         <a href="https://github.com/{{ site.github_user }}/fiftyone-object-tracking">fiftyone-object-tracking</a>
         <a href="https://github.com/{{ site.github_user }}/fiftyone-aws">fiftyone-aws</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section project" id="audio">
+  <div class="project-grid">
+    <div class="project-meta mono">
+      <span class="tag">Open source</span>
+      <span>Python · TypeScript</span>
+      <span>CLAP · spectrograms</span>
+      <span class="status">Released</span>
+    </div>
+    <div class="project-body">
+      <h2>FiftyOne Audio Toolkit</h2>
+      <p>A plugin that makes audio a first-class citizen in FiftyOne. A custom renderer
+         draws log-power spectrograms so clips are visible in the sample grid, with a
+         player and playhead in the modal. An embeddings search panel queries a collection
+         by example clip or natural-language prompt, with a distance histogram, a threshold
+         slider, and positive/negative mining into saved views. Operators compute the
+         embeddings, backed by LAION CLAP, Microsoft MS-CLAP, or your own HTTP endpoint.</p>
+      <p>Built for my talk at the Voxel51 Audio and AI Meetup, "Curating, Searching, and
+         Evaluating Audio Datasets in FiftyOne" — similarity search on ESC-50, captioning
+         on Clotho, and the DCASE 2026 audio moment retrieval challenge.</p>
+      <p class="project-links mono">
+        <a href="https://github.com/{{ site.github_user }}/fiftyone-audio-toolkit">fiftyone-audio-toolkit</a>
+        <a href="https://github.com/{{ site.github_user }}/fiftyone-audio-meetup">fiftyone-audio-meetup</a>
+        <a href="https://youtu.be/HFSGU5sQy0k">Talk video</a>
       </p>
     </div>
   </div>

@@ -233,6 +233,18 @@ permalink: /resume/
   </div>
 
   <div class="resume-block">
+    <p class="eyebrow mono">Talks</p>
+    <ul class="pub-list">
+      <li>
+        <span class="pub-title">"Curating, Searching, and Evaluating Audio Datasets in
+        FiftyOne."</span>
+        <span class="pub-meta mono">Voxel51 Audio and AI Meetup, August 2026 ·
+        <a href="https://youtu.be/HFSGU5sQy0k">video</a></span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="resume-block">
     <p class="eyebrow mono">Certifications</p>
     <ul class="resume-detail">
       <li>FAA Commercial Pilot Certificate — Rotorcraft-Helicopter, Instrument
