@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Projects
-description: Robotics and perception projects — R-1, PRISM, FiftyOne plugins, research.
+description: Robotics and perception projects — Arwun, PRISM, FiftyOne plugins, research.
 ---
 
 <section class="wrap section page-head">
@@ -11,7 +11,7 @@ description: Robotics and perception projects — R-1, PRISM, FiftyOne plugins, 
      <a href="https://github.com/{{ site.github_user }}">GitHub</a>.</p>
 </section>
 
-<section class="wrap section project" id="r1">
+<section class="wrap section project" id="arwun">
   <div class="project-grid">
     <div class="project-meta mono">
       <span class="tag">Robot</span>
@@ -20,7 +20,7 @@ description: Robotics and perception projects — R-1, PRISM, FiftyOne plugins, 
       <span class="status">In development</span>
     </div>
     <div class="project-body">
-      <h2>R-1</h2>
+      <h2>Arwun</h2>
       <p>A small, portable, and highly mobile tracked robot, designed from scratch. Diff drive
          on two long side treads, plus two flipper arms that extend the chassis to climb and
          descend stairs, and let the robot stand upright and balance. A camera and an IMU
