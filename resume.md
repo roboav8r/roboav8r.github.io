@@ -6,7 +6,7 @@ permalink: /resume/
 ---
 
 <section class="wrap section page-head">
-  <p class="eyebrow mono">Background</p>
+  <p class="eyebrow mono">Background</p> 
   <h1>Resume</h1>
   <p class="lede">
     Army aviator → aerospace engineer → robotics PhD → ML engineer.
