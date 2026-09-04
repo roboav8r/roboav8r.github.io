@@ -11,3 +11,6 @@ vendor/bundle/
 
 # Local resume source files (staging area for building the master resume — not published)
 resumes/
+
+# Claude Code per-machine permissions (absolute local paths); skills are shared
+.claude/settings.local.json
