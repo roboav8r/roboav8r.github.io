@@ -12,6 +12,6 @@ I made a gesture classifier as part of a human-robot interaction project back in
 
 Notably, I trained the gesture classifier using the [Robot Control Gestures v2 dataset](https://github.com/reddyav1/RoCoG-v2), which consists of both synthetic and real videos of standard hand and arm signals.
 
-I had a chance to explore the sim-to-real gap firsthand. The real takeaway wasn't "synthetic data = bad", it's much more nuanced than that. Synthetic data is an excellent resource when used properly, and FiftyOne helped me to diagnose the issues with just using synthetic data as-is.
+I had a chance to explore the sim-to-real gap firsthand. The real takeaway wasn't "synthetic data = bad", it's much more nuanced than that. Synthetic data is an excellent resource when used properly, and FiftyOne helped me to diagnose the issues rather than just using synthetic data as-is.
 
 Please [have a read](https://voxel51.com/blog/sim-to-real-gesture-classification-fiftyone) if you're curious.
